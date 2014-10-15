@@ -32,6 +32,35 @@ codes <- list(
   bgWhite = c(47, 49)
 )
 
+## ANSI fg color -> R color
+
+ansi_fg_r <- c(
+  "black" = "black",
+  "red" = "red",
+  "green" = "green",
+  "yellow" = "yellow",
+  "blue" = "blue",
+  "magenta" = "magenta",
+  "cyan" = "cyan",
+  "white" = "white",
+  "silver" = "grey"
+)
+
+ansi_fg_rgb <- col2rgb(ansi_fg_r)
+
+ansi_bg_r <- c(
+  "bgBlack" = "black",
+  "bgRed" = "red",
+  "bgGreen" = "green",
+  "bgYellow" = "yellow",
+  "bgBlue" = "blue",
+  "bgMagenta" = "magenta",
+  "bgCyan" = "cyan",
+  "bgWhite" = "white"
+)
+
+ansi_bg_rgb <- col2rgb(ansi_bg_r)
+
 make_chr_style <- function(code) {
   list(
     open = '\u001b[' %+% chr(codes[[code]][1]) %+% 'm',
@@ -39,20 +68,5 @@ make_chr_style <- function(code) {
   )
 }
 
-#' ANSI escape sequences of crayon styles
-#'
-#' You can use this object to list all availables crayon styles,
-#' via \code{names(styles)}, or to explicitly apply an ANSI
-#' escape seauence to a string.
-#'
-#' @format A named list. Each list element is a list of two
-#'   strings, named \sQuote{open} and \sQuote{close}.
-#'
-#' @seealso \code{\link{crayon}} for the beginning of the crayon manual.
-#' @export
-#' @examples
-#' names(styles)
-#' cat(styles[["bold"]]$close)
-
-styles <- lapply(names(codes), make_chr_style)
-names(styles) <- names(codes)
+builtin_styles <- lapply(names(codes), make_chr_style)
+names(builtin_styles) <- names(codes)
