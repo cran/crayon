@@ -1,4 +1,28 @@
 
+data_frame <- function(...) {
+
+  args <- list(...)
+
+  ## Replicate arguments if needed
+  len <- vapply(args, length, numeric(1))
+  stopifnot(length(setdiff(len, 1)) <= 1)
+  len <- max(0, max(len))
+  args <- lapply(args, function(x) rep(x, length.out = len))
+
+  ## Names
+  names <- as.character(names(args))
+  length(names) <- length(args)
+  names <- ifelse(
+    is.na(names) | names == "",
+    paste0("V", seq_along(args)),
+    names)
+
+  structure(args,
+            class = "data.frame",
+            names = names,
+            row.names = seq_along(args[[1]]))
+}
+
 check_string <- function(x) {
   stopifnot(is.character(x), length(x) == 1, !is.na(x))
 }
@@ -44,3 +68,49 @@ multicol <- function(x) {
   xm <- matrix(x, ncol = num_cols, byrow = TRUE)
   apply(xm, 1, paste, collapse = "") %+% "\n"
 }
+
+re_table <- function(...) {
+  lapply(gregexpr(...), function(x) {
+    res <- data_frame(
+      start = x,
+      end = x + attr(x, "match.length") - 1,
+      length = attr(x, "match.length")
+    )
+    res <- res[res$start != -1, ]
+  })
+}
+
+## Create the non-matching table from the matching table
+
+non_matching <- function(table, str, empty = FALSE) {
+  mapply(table, str, SIMPLIFY = FALSE, FUN = function(t, s) {
+    if (! nrow(t)) {
+      data_frame(start = 1, end = base::nchar(s), length = base::nchar(s))
+    } else {
+      res <- data_frame(start = c(1, t$end + 1),
+                        end = c(t$start - 1, base::nchar(s)))
+      res$length <- res$end - res$start + 1
+      if (!empty) res[ res$length != 0, , drop = FALSE ]
+      res
+    }
+  })
+}
+
+myseq <- function(from, to, by = 1) {
+  stopifnot(by != 0)
+  if (by > 0) {
+    if (to < from) {
+      integer()
+    } else {
+      seq(from, to, by = by)
+    }
+  } else {
+    if (to > from) {
+      integer()
+    } else {
+      seq(from, to, by = by)
+    }
+  }
+}
+
+`%:%` <- myseq
