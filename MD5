@@ -1,4 +1,4 @@
-879f6ed36b313e263afe2a4c97f21dbf *DESCRIPTION
+e783f5b200f0237d33cafc952c472fac *DESCRIPTION
 dd9b9a646c92126c8c99c14a7a11753a *LICENSE
 7b7eb426cb2d8570ceb483d4f7369aad *NAMESPACE
 543232857afba7f0d460a36fb950e85a *R/ansi-256.r
@@ -6,7 +6,7 @@ d91d95b5a9db91ec97b5b1c03a2eb01d *R/combine.r
 722a272258c2dcc30ffe7ae958c7b7b7 *R/crayon-package.r
 496af82e4a6310abb0dcb530c5cd728f *R/disposable.r
 b501573c5d249cd7971bc2815deab815 *R/has_ansi.r
-1c18f5e38da550e9940b2590911d6df1 *R/has_color.r
+18933d549af527b5c4a90bf2bebd214b *R/has_color.r
 979d31d8df46eec80e6f35645464fbb8 *R/machinery.r
 d60aa06633288dddff27c30abbd93ae5 *R/print.r
 34e9b27d9d071a9b910510ff544bcfb1 *R/show.r
@@ -15,6 +15,10 @@ aa58827122f4e5028398684ae4860d65 *R/string_operations.r
 7733b7a4e19f8ac091c59a5d1308b637 *R/style-var.r
 7117857a16121744d8ab7e5bddfec9f9 *R/styles.r
 39205d785652c83f9ff70924b3152211 *R/utils.r
+175d390058b8a9b12995525725218cf4 *inst/ANSI-256-OSX.png
+5a18e3dc240c1f6cfffd6059c8de5345 *inst/ANSI-8-OSX.png
+232de648bf7331c128404b8f87dbb0c8 *inst/NEWS.md
+51454c415a280eee6802d63d9558ddf5 *inst/README.markdown
 8f114430b2ffc7cb56946a4b7e6f5ef3 *man/chr.Rd
 7dc3b9d87afa497694470d5ba5f784e4 *man/col_nchar.Rd
 f8d57a59e8cc2dd00fb79689216008a3 *man/col_strsplit.Rd
