@@ -33,23 +33,23 @@ It does make sense to combine different kind of styles,
 e.g. background color, foreground color, bold font.
 
 The \code{$} operator can also be used to combine styles.
-Not that the left hand side of \code{$} is a style function,
+Note that the left hand side of \code{$} is a style function,
 and the right hand side is the name of a style in \code{\link[=styles]{styles()}}.
 }
 \examples{
 ## Use style names
 alert <- combine_styles("bold", "red4", "bgCyan")
-cat(alert("Warning!"), "\\n")
+cat(alert("Warning!"), "\n")
 
 ## Or style functions
 alert <- combine_styles(bold, red, bgCyan)
-cat(alert("Warning!"), "\\n")
+cat(alert("Warning!"), "\n")
 
 ## Combine a composite style
 alert <- combine_styles(bold, combine_styles(red, bgCyan))
-cat(alert("Warning!"), "\\n")
+cat(alert("Warning!"), "\n")
 
 ## Shorter notation
 alert <- bold $ red $ bgCyan
-cat(alert("Warning!"), "\\n")
+cat(alert("Warning!"), "\n")
 }

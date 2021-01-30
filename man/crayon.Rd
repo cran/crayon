@@ -3,8 +3,6 @@
 \docType{package}
 \name{crayon}
 \alias{crayon}
-\alias{crayon-package}
-\alias{crayon}
 \alias{reset}
 \alias{bold}
 \alias{blurred}
@@ -35,7 +33,7 @@
 ## Simple styles
 red(...)
 bold(...)
-...
+# ...
 
 ## See more styling below
 }
@@ -48,7 +46,7 @@ for notes, warnings, errors; and combine styles.
 }
 \details{
 ANSI color support is automatically detected and used. Crayon was largely
-inspired by chalk \url{https://github.com/sindresorhus/chalk}.
+inspired by chalk \url{https://github.com/chalk/chalk}.
 
 Crayon defines several styles, that can be combined. Each style in the list
 has a corresponding function with the same name.
@@ -149,9 +147,9 @@ cat(green(
 error <- red $ bold
 warn <- magenta $ underline
 note <- cyan
-cat(error("Error: subscript out of bounds!\\n"))
-cat(warn("Warning: shorter argument was recycled.\\n"))
-cat(note("Note: no such directory.\\n"))
+cat(error("Error: subscript out of bounds!\n"))
+cat(warn("Warning: shorter argument was recycled.\n"))
+cat(note("Note: no such directory.\n"))
 
 }
 \seealso{

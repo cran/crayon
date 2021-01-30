@@ -95,10 +95,8 @@ myseq <- function(from, to, by = 1) {
 
 emacs_version <- function() {
   ver <- Sys.getenv("INSIDE_EMACS")
+  ver <- gsub("[^0-9\\.]+", "", ver)  
   if (ver == "") return(NA_integer_)
-
-  ver <- gsub("'", "", ver)
-  ver <- strsplit(ver, ",", fixed = TRUE)[[1]]
   ver <- strsplit(ver, ".", fixed = TRUE)[[1]]
   as.numeric(ver)
 }
@@ -124,7 +122,8 @@ rstudio_with_ansi_support <- function() {
 
 rstudio_initialized <- function() {
   ## Not in RStudio, so no worries
-  if (Sys.getenv("RSTUDIO") == "") return(TRUE)
+  rs <- Sys.getenv("RSTUDIO")
+  if (rs == "" || rs == "0") return(TRUE)
 
   ## Otherwise check
   requireNamespace("rstudioapi", quietly = TRUE) &&
