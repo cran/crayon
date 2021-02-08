@@ -1,4 +1,11 @@
 
+# 1.4.1
+
+* ANSI color support detection works correctly now in older RStudio (#112).
+
+* ANSI color support detection works correctly now on older R versions
+  (#109).
+
 # 1.4.0
 
 * Overhauled and much improved detection of ANSI color support and

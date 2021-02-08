@@ -1,9 +1,9 @@
-34db9f354857b610586b95ee6c26d4a1 *DESCRIPTION
+31a998cc6b05aec0e370d2060fb0c02c *DESCRIPTION
 71e081e70f89b75ba2781efdce97f3b4 *LICENSE
 e2c013428a135455a1a7d0ae7a893385 *NAMESPACE
-92d57b6eb80bd39b528f777400e3e6de *NEWS.md
+8b4fd998780c92547536abe22830f072 *NEWS.md
 f28d13d5f899152392e6ff0b1b39e2ca *R/aaa-rstudio-detect.R
-cac6a918527cce26f63ccf4ab497e14d *R/aab-num-ansi-colors.R
+0ceabd03165735468d716a58f8c8d83b *R/aab-num-ansi-colors.R
 3f3f25348f24cddea31d27e570e80f2d *R/ansi-256.r
 c678ccd07b924a7d34cadef0bb8ef62c *R/combine.r
 72e4ddff2c7012b962145fd53281ee48 *R/crayon-package.r
