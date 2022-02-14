@@ -95,7 +95,7 @@ myseq <- function(from, to, by = 1) {
 
 emacs_version <- function() {
   ver <- Sys.getenv("INSIDE_EMACS")
-  ver <- gsub("[^0-9\\.]+", "", ver)  
+  ver <- gsub("[^0-9\\.]+", "", ver, useBytes = TRUE)
   if (ver == "") return(NA_integer_)
   ver <- strsplit(ver, ".", fixed = TRUE)[[1]]
   as.numeric(ver)
@@ -132,4 +132,16 @@ rstudio_initialized <- function() {
 
 os_type <- function() {
   .Platform$OS.type
+}
+
+rstudio_detect <- function() {
+  rstudio$detect()
+}
+
+is_count <- function(x) {
+  is.numeric(x) &&
+    length(x) == 1 &&
+    !is.na(x) &&
+    as.integer(x) == x &&
+    x >= 0
 }
