@@ -1,13 +1,13 @@
-d26b202e4823c4881c35c89aab05b101 *DESCRIPTION
+5c285efde2edb462ff53a4fe10aada10 *DESCRIPTION
 71e081e70f89b75ba2781efdce97f3b4 *LICENSE
 e2c013428a135455a1a7d0ae7a893385 *NAMESPACE
-03071a2f16b584207d2fefdfc97a0caf *NEWS.md
+553743986a5a49905f6686f37882299d *NEWS.md
 de9230c7f4e3c3c6a210aabff2cad858 *R/aaa-rstudio-detect.R
 6d32216035fb4ac46d9401e1bdde9596 *R/aaaa-rematch2.R
 e73321fc24f803906a9b5a01578838c0 *R/aab-num-ansi-colors.R
 6d0c3010260e1bc8655a07f1d3c686d4 *R/aac-num-ansi-colors.R
 3f3f25348f24cddea31d27e570e80f2d *R/ansi-256.r
-f7e1d21b49803e0b47b4afe95e3caa17 *R/ansi-palette.R
+b6762bc6fa7338db4691d8a542df5564 *R/ansi-palette.R
 c678ccd07b924a7d34cadef0bb8ef62c *R/combine.r
 72e4ddff2c7012b962145fd53281ee48 *R/crayon-package.r
 1dea456a152b15068d387e5293a9d356 *R/disposable.r
@@ -45,7 +45,7 @@ ae5359585b92d4323fc3507488fbe92d *man/start.crayon.Rd
 9a91f8fceb889eb55808c8aad13d8fc3 *man/strip_style.Rd
 2fc0045cd3614113ad14a42789e6db7c *man/style.Rd
 66308c7d1350128c2d1a3a1d6175d494 *man/styles.Rd
-943758c7965d5d220d1162fb9ce9199b *tests/testthat.R
+16a1500de2a61547d6a75bdb5dfce86b *tests/testthat.R
 c5d9040bb16e9172523fe8e34545861c *tests/testthat/helper.R
 2b80cfcf446505a85d98882c89d5fc30 *tests/testthat/test-ansi256.R
 5a6ed65864bfca60399359ba25f097fe *tests/testthat/test-color.r
