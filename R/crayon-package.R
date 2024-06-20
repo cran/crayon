@@ -9,8 +9,7 @@
 #' ANSI color support is automatically detected and used. Crayon was largely
 #' inspired by chalk \url{https://github.com/chalk/chalk}.
 #' 
-#' @include utils.r
-#' @include string.r
-#' @docType package
+#' @include utils.R
+#' @include string.R
 #' @name crayon
-NULL
+"_PACKAGE"
